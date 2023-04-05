@@ -1,0 +1,43 @@
+.form {
+  display: flex;
+  flex-direction: row;
+}
+
+.input {
+  background-color: #fff;
+  border-radius: 10rem;
+  padding-left: 1rem;
+  font-size: 20px;
+  transition: all 0.3s;
+  margin-left: 2rem;
+  max-width: 90%;
+  width: 15rem;
+}
+.input:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 0.7rem 3rem rgba(color-grey-dark-1, 0.08);
+}
+
+@media screen and (max-width: 800px) {
+  .input {
+    width: 9rem;
+    margin-left: 0;
+  }
+  .btnF::before {
+    content: "🔍";
+  }
+  .btnF {
+    padding: 0.3rem;
+  }
+  .span {
+    display: none;
+  }
+}
+/* @media screen and (max-width: 800px) {
+  .btn::after {
+    content: "🔍";
+  }
+  .btn {
+    padding: 0;
+  }
+} */

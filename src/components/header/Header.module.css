@@ -1,0 +1,61 @@
+.header {
+  background-color: rgb(29, 26, 26, 0.98);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  /* border-bottom: 5px solid #23c483; */
+}
+.headercontainer {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+}
+.errorcontainer {
+  background-color: #23c483;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  transition: all 0.4s;
+  color: white;
+}
+.invalid {
+  background-color: rgb(198, 14, 14);
+  padding: 0.7rem;
+  transition: all 0.4s;
+}
+
+.titleSearch {
+  display: flex;
+  align-items: center;
+  float: right;
+}
+.h1 {
+  float: left;
+  color: rgb(255, 253, 253);
+  font-style: italic;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 40px;
+  line-height: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.h1:hover {
+  color: #23c483;
+  transition: all 0.4s;
+}
+@media screen and (max-width: 600px) {
+  .h1 {
+    font-size: 25px;
+  }
+  .span {
+    display: none;
+  }
+  .h1::before {
+    content: "C-INFO";
+  }
+}
