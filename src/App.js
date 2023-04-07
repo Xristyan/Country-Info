@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "./components/header/Header";
 import CountriesSection from "./components/contriesSection/CountriesSection";
 import useHttp from "./components/hooks/use-http";
+import usePagination from "./components/hooks/use-pagination";
 
 import Map from "./components/Map/Map";
 function App() {
@@ -10,7 +11,6 @@ function App() {
   const [showMap, setShowMap] = useState(false);
   const [latlng, setLatLng] = useState([15.5, -90.25]);
   const countriesDataHandler = (data) => {
-    console.log(data);
     const countriesArray = data.map((country, i) => {
       return {
         id: i,
@@ -30,6 +30,7 @@ function App() {
     setCountries(countriesArray);
   };
   const { getAllContries, isLoading } = useHttp();
+
   const resetHandler = () => {
     setReset((prev) => {
       return !prev;

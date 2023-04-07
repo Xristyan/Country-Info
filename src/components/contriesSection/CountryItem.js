@@ -1,24 +1,12 @@
 import classes from "./CountryItem.module.css";
-import React, { useState } from "react";
+import React from "react";
 const CountryItem = (props) => {
-  // const [showInfo, setShowInfo] = useState(false);
-  // const showInfoHandler = () => {
-  //   setShowInfo(true);
-  // };
-  // const hideInfoHandler = () => {
-  //   setShowInfo(false);
-  // };
   const showMap = () => {
     props.showMap();
     props.onLatlngHandler(props.latlng);
   };
   return (
-    <div
-      // onMouseEnter={showInfoHandler}
-      // onMouseLeave={hideInfoHandler}
-      onClick={showMap}
-      className={classes.item}
-    >
+    <div onClick={showMap} className={classes.item}>
       <img className={classes.pic} src={props.flag} />
       {/* {showInfo && ( */}
       <div className={classes.info}>
